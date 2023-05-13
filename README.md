@@ -1,6 +1,6 @@
 # app_continental
 
-A new Flutter project.
+Frontend para a app da Continental para dispositivos tablet.
 
 ## Getting Started
 
