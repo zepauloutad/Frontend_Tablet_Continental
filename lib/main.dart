@@ -22,6 +22,27 @@ class _HomeState extends State<Home> {
         backgroundColor: Colors.orange,
         title: Image.asset("images/logo.png",
         height: 100,),
+          actions: <Widget>[
+            Row(
+              children: [
+                Padding(
+                  padding: EdgeInsets.only(right: 5),
+                  child: Text(
+                    "Bem-Vindo!",
+                    style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                        fontSize: 18,
+                        color: Colors.black
+                    ),
+                  ),
+                ),
+                IconButton(
+                  icon: const Icon(Icons.login),
+                  tooltip: 'Efetuar Logout',
+                  onPressed: (null),
+                )],
+            )
+            ]
       ),
       body: Center(
         child: Container(
