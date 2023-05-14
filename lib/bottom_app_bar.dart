@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:app_continental/helpers/flutterfont.dart';
+import 'alerts.dart';
 
 class MyBottomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const MyBottomAppBar({super.key});
@@ -48,7 +49,9 @@ class MyBottomAppBar extends StatelessWidget implements PreferredSizeWidget {
             icon: const Icon(FlutterFontIcons.alert),
             iconSize: 40,
             onPressed: () {
-              // Handle menu button press
+             Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const Alerts()),);
             },
           ),
         ],
