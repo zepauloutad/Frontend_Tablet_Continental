@@ -1,6 +1,7 @@
+import 'package:app_continental/helpers/flutterfont.dart';
 import 'package:flutter/material.dart';
 
-void main(){
+void main() {
   runApp(const MaterialApp(
     home: Home(),
     debugShowCheckedModeBanner: false,
@@ -18,11 +19,13 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.orange,
-        title: Image.asset("images/logo.png",
-        height: 100,),
-          actions: <Widget>[
+        appBar: AppBar(
+          backgroundColor: Colors.orange,
+          title: Image.asset(
+            "assets/images/logo.png",
+            height: 100,
+          ),
+          actions: const <Widget>[
             Row(
               children: [
                 Padding(
@@ -32,65 +35,68 @@ class _HomeState extends State<Home> {
                     style: TextStyle(
                         fontWeight: FontWeight.w500,
                         fontSize: 18,
-                        color: Colors.black
-                    ),
+                        color: Colors.black),
                   ),
                 ),
                 IconButton(
-                  icon: const Icon(Icons.login),
+                  icon:  Icon(Icons.login),
                   tooltip: 'Efetuar Logout',
                   onPressed: (null),
-                )],
+                )
+              ],
             )
-            ]
+          ]),
+      body: const Center(
       ),
-      body: Center(
-        child: Container(
-          padding: const EdgeInsets.all(16),
-          /*width: double.infinity,
-          decoration: BoxDecoration(
-              border: Border.all(width: 3, color: Colors.amber)
-          ),*/
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              const Text("Clique abaixo para gerar uma frase!",
-                  textAlign: TextAlign.justify,
-                  style: TextStyle(
-                      fontSize: 17,
-                      fontStyle: FontStyle.italic,
-                      color: Colors.black
-                  )
-              ),
-              ElevatedButton(onPressed: (){},
-                  style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all<Color>(Colors.green)
-                  ),
-                  child: const Text(
-                    "Nova Frase",
-                    style: TextStyle(
-                        fontSize: 25,
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold
-                    ),
-                  )
-              )
-            ],
-          ),
+    bottomNavigationBar: BottomAppBar(
+    // Your bottom app bar configuration here
+    color: Colors.orange,
+    child: Row(
+      children: [
+        
+        IconButton(
+          tooltip: 'Home',
+          icon: const Icon(Icons.home),
+          iconSize: 40,
+          onPressed: () {
+            // Handle menu button press
+          },
         ),
-      ),
-      bottomNavigationBar: BottomAppBar(
-        color: Colors.orange,
-        padding: EdgeInsets.fromLTRB(10,15,10,10),
-        child: Text("Desenvolvimento Android e IOS com Flutter -Crie 15 Apps",
-            textAlign: TextAlign.center,
-            style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold
-            )
+        //  const Spacer(),
+          const SizedBox(width: 20),
+          IconButton(
+          tooltip: 'Painel de Administração',
+          icon: const Icon(FlutterFontIcons.admin),
+          iconSize: 40,
+          onPressed: () {
+            // Handle menu button press
+          },
         ),
-      ),
+        
+        //  const Spacer(),
+        const SizedBox(width: 20),
+          IconButton(
+          tooltip: 'Gestão de Linhas',
+          icon: const Icon(FlutterFontIcons.lines),
+          iconSize: 40,
+          onPressed: () {
+            // Handle menu button press
+          },
+        ),
+        // const Spacer(),
+        const SizedBox(width: 20),
+          IconButton(
+          tooltip: 'Alertas Recebidos',
+          icon: const Icon(FlutterFontIcons.alert),
+          iconSize: 40,
+          onPressed: () {
+            // Handle menu button press
+          },
+        ),
+      ],
+    ),
+  ),
+  
     );
   }
 }
