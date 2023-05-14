@@ -17,6 +17,21 @@ class _FactoryLinesState extends State<FactoryLines> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          Container(
+            color: Colors.grey,
+            width: double.infinity,
+            child: const Row(
+              children: [
+                Padding(
+                  padding: EdgeInsets.only(left: 34),
+                  child: Text(
+                    'Linhas Disponíveis',
+                    style: TextStyle(fontSize: 30),
+                  ),
+                ),
+              ],
+            ),
+          ),
                   SizedBox(
             width: double.infinity,
             child: Column(
