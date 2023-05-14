@@ -22,24 +22,40 @@ class _AlertsState extends State<Alerts> {
             color: Colors.grey,
             width: double.infinity,
             child: const Row(
+             
               children: [
-                Text(
-                  'Alertas Recebidos',
-                  style: TextStyle(fontSize: 30),
+                Padding(
+                  padding: EdgeInsets.only(left: 34),
+                  child: Text(
+                    'Alertas Recebidos',
+                    style: TextStyle(fontSize: 30),
+                  ),
                 ),
-                // Widgets for the first row
               ],
             ),
           ),
           Container(
             color: Colors.red,
             width: double.infinity,
-            child:  Row(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                // Image.asset('assets/images/warning.png'),
-                const Text(
-                  'Linha 17 - Avaria nv.2',
-                  style: TextStyle(fontSize: 30),
+                Padding(
+                  padding: const EdgeInsets.only(left: 20),
+                  child: Image.asset(
+                    'assets/images/warning.png',
+                    width: 50,
+                    height: 50,
+                  ),
+                ),
+                const SizedBox(
+                  width: 20,
+                ),
+                const Expanded(
+                  child: Text(
+                    'Linha 17 - Avaria nv.2',
+                    style: TextStyle(fontSize: 30),
+                  ),
                 ),
                 Checkbox(
                   value: isChecked,
@@ -49,58 +65,141 @@ class _AlertsState extends State<Alerts> {
                     });
                   },
                 ),
-
-                // Widgets for the second row
               ],
             ),
           ),
           Container(
             color: Colors.red,
             width: double.infinity,
-            child: const Row(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Text(
-                  'Linha 31 - Avaria nv.1',
-                  style: TextStyle(fontSize: 30),
+                Padding(
+                  padding: const EdgeInsets.only(left: 20),
+                  child: Image.asset(
+                    'assets/images/warning.png',
+                    width: 50,
+                    height: 50,
+                  ),
                 ),
-                // Widgets for the second row
+                const SizedBox(
+                  width: 20,
+                ),
+                const Expanded(
+                  child: Text(
+                    'Linha 31 - Avaria nv.1',
+                    style: TextStyle(fontSize: 30),
+                  ),
+                ),
+                Checkbox(
+                  value: isChecked,
+                  onChanged: (bool? newValue) {
+                    setState(() {
+                      isChecked = newValue!;
+                    });
+                  },
+                ),
               ],
             ),
           ),
           Container(
             color: Colors.yellow,
             width: double.infinity,
-            child: const Row(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Text(
-                  'Linha 21 - Com Falta de Stock',
-                  style: TextStyle(fontSize: 30),
+                Padding(
+                  padding: const EdgeInsets.only(left: 20),
+                  child: Image.asset(
+                    'assets/images/warning.png',
+                    width: 50,
+                    height: 50,
+                  ),
                 ),
-                // Widgets for the second row
+                const SizedBox(
+                  width: 20,
+                ),
+                const Expanded(
+                  child: Text(
+                    'Linha 21 - Com Falta de Stock',
+                    style: TextStyle(fontSize: 30),
+                  ),
+                ),
+                Checkbox(
+                  value: isChecked,
+                  onChanged: (bool? newValue) {
+                    setState(() {
+                      isChecked = newValue!;
+                    });
+                  },
+                ),
               ],
             ),
           ),
           Container(
             color: Colors.yellow,
             width: double.infinity,
-            child: const Row(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Text(
-                  'Linha 22 - Com Falta de Stock',
-                  style: TextStyle(fontSize: 30),
+                Padding(
+                  padding: const EdgeInsets.only(left: 20),
+                  child: Image.asset(
+                    'assets/images/warning.png',
+                    width: 50,
+                    height: 50,
+                  ),
                 ),
-                // Widgets for the second row
+                const SizedBox(
+                  width: 20,
+                ),
+                const Expanded(
+                  child: Text(
+                    'Linha 22 - Com Falta de Stock',
+                    style: TextStyle(fontSize: 30),
+                  ),
+                ),
+                Checkbox(
+                  value: isChecked,
+                  onChanged: (bool? newValue) {
+                    setState(() {
+                      isChecked = newValue!;
+                    });
+                  },
+                ),
               ],
             ),
           ),
           Container(
             color: Colors.yellow,
             width: double.infinity,
-            child: const Row(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Text(
-                  'Linha 25 - Com Falta de Stock',
-                  style: TextStyle(fontSize: 30),
+                Padding(
+                  padding: const EdgeInsets.only(left: 20),
+                  child: Image.asset(
+                    'assets/images/warning.png',
+                    width: 50,
+                    height: 50,
+                  ),
+                ),
+                const SizedBox(
+                  width: 20,
+                ),
+                const Expanded(
+                  child: Text(
+                    'Linha 25 - Com Falta de Stock',
+                    style: TextStyle(fontSize: 30),
+                  ),
+                ),
+                Checkbox(
+                  value: isChecked,
+                  onChanged: (bool? newValue) {
+                    setState(() {
+                      isChecked = newValue!;
+                    });
+                  },
                 ),
               ],
             ),
