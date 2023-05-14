@@ -13,6 +13,7 @@ class MyBottomAppBar extends StatelessWidget implements PreferredSizeWidget {
     return BottomAppBar(
       color: Colors.orange,
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           IconButton(
             tooltip: 'Home',

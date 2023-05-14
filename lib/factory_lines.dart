@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:app_continental/app_bar.dart';
 import 'bottom_app_bar.dart';
+import 'searchbar.dart';
 
 class FactoryLines extends StatefulWidget {
   const FactoryLines({super.key});
@@ -10,29 +11,71 @@ class FactoryLines extends StatefulWidget {
 }
 
 class _FactoryLinesState extends State<FactoryLines> {
+ 
+
   @override
   Widget build(BuildContext context) {
-    return   Scaffold(
-      appBar:  const MyAppBar(),
+    return Scaffold(
+      appBar: const MyAppBar(),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
-            color: Colors.grey,
-            width: double.infinity,
-            child: const Row(
-              children: [
-                Padding(
+        Container(
+      color: Colors.grey,
+      width: double.infinity,
+      child: Row(
+        children: [
+            const Padding(
                   padding: EdgeInsets.only(left: 34),
                   child: Text(
                     'Linhas Disponíveis',
                     style: TextStyle(fontSize: 30),
                   ),
                 ),
-              ],
+          const Padding(
+            padding:  EdgeInsets.only(left: 150),
+            child: Icon(
+              Icons.search,
+              color: Colors.white,
+              size: 24,
             ),
           ),
-                  SizedBox(
+          const SizedBox(width: 4),
+          Expanded(
+            child: Container(
+              decoration: BoxDecoration(
+
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(8),
+                
+              ),
+              padding: const EdgeInsets.symmetric(horizontal: 8),
+              child: Row(
+                children: [
+                  const Expanded(
+                    child: TextField(
+                      decoration: InputDecoration(
+                        hintText: 'Search',
+                        border: InputBorder.none,
+                      ),
+                    ),
+                  ),
+                  IconButton(
+                    icon: const Icon(Icons.clear),
+                    onPressed: () {
+                      // Clear the search query
+                    },
+                  ),
+                ],
+              ),
+            ),
+          ),
+          const SizedBox(width: 12),
+        ],
+        
+      ),
+    ),
+          SizedBox(
             width: double.infinity,
             child: Column(
               children: [
@@ -78,7 +121,7 @@ class _FactoryLinesState extends State<FactoryLines> {
               ],
             ),
           ),
-           SizedBox(
+          SizedBox(
             width: double.infinity,
             child: Column(
               children: [
@@ -540,8 +583,7 @@ class _FactoryLinesState extends State<FactoryLines> {
           ),
         ],
       ),
-      
-       bottomNavigationBar:  const MyBottomAppBar(),
+      bottomNavigationBar: const MyBottomAppBar(),
     );
   }
 }
