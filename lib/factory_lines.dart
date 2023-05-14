@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:app_continental/app_bar.dart';
 import 'bottom_app_bar.dart';
-import 'searchbar.dart';
 
 class FactoryLines extends StatefulWidget {
   const FactoryLines({super.key});
