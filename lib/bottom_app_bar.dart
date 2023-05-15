@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:app_continental/helpers/flutterfont.dart';
 import 'alerts.dart';
 import 'user_list.dart';
+import 'logged_in.dart';
 
 class MyBottomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const MyBottomAppBar({super.key});
@@ -21,7 +22,12 @@ class MyBottomAppBar extends StatelessWidget implements PreferredSizeWidget {
             icon: const Icon(Icons.home),
             iconSize: 40,
             onPressed: () {
-              // Handle menu button press
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const LoggedIn(),
+                ),
+              );
             },
           ),
           //  const Spacer(),
