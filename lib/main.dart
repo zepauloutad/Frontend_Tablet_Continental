@@ -1,3 +1,4 @@
+import 'package:app_continental/adminPanel.dart';
 import 'package:app_continental/login.dart';
 import 'package:flutter/material.dart';
 import 'app_bar.dart';
@@ -6,7 +7,7 @@ import 'bottom_app_bar.dart';
 // import 'app_bar.dart';
 void main() {
   runApp(const MaterialApp(
-    home: login(),
+    home: adminPanel(),
     debugShowCheckedModeBanner: false,
   ));
 }
