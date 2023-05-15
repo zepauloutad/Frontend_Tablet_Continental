@@ -1,3 +1,4 @@
+import 'package:app_continental/login.dart';
 import 'package:flutter/material.dart';
 import 'app_bar.dart';
 import 'bottom_app_bar.dart';
@@ -5,7 +6,7 @@ import 'bottom_app_bar.dart';
 // import 'app_bar.dart';
 void main() {
   runApp(const MaterialApp(
-    home: Home(),
+    home: login(),
     debugShowCheckedModeBanner: false,
   ));
 }
@@ -27,4 +28,3 @@ class _HomeState extends State<Home> {
     );
   }
 }
-
