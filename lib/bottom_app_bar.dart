@@ -2,6 +2,7 @@ import 'package:app_continental/factory_lines.dart';
 import 'package:flutter/material.dart';
 import 'package:app_continental/helpers/flutterfont.dart';
 import 'alerts.dart';
+import 'user_list.dart';
 
 class MyBottomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const MyBottomAppBar({super.key});
@@ -30,10 +31,14 @@ class MyBottomAppBar extends StatelessWidget implements PreferredSizeWidget {
             icon: const Icon(FlutterFontIcons.admin),
             iconSize: 40,
             onPressed: () {
-              // Handle menu button press
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const UserList(),
+                ),
+              );
             },
           ),
-
           //  const Spacer(),
           const SizedBox(width: 20),
           IconButton(
@@ -43,7 +48,9 @@ class MyBottomAppBar extends StatelessWidget implements PreferredSizeWidget {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const FactoryLines()),
+                MaterialPageRoute(
+                  builder: (context) => const FactoryLines(),
+                ),
               );
             },
           ),
@@ -56,7 +63,9 @@ class MyBottomAppBar extends StatelessWidget implements PreferredSizeWidget {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const Alerts()),
+                MaterialPageRoute(
+                  builder: (context) => const Alerts(),
+                ),
               );
             },
           ),
